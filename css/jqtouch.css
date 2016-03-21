@@ -5,7 +5,10 @@ may be freely distributed under the MIT license.
 */
 
 @charset "UTF-8";
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(base.css);
+@import url(forms.css);
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css *//*
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
 body{margin:0;}
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block;}
@@ -36,7 +39,7 @@ button,html input[type="button"],input[type="reset"],input[type="submit"]{-webki
 button[disabled],html input[disabled]{cursor:default;}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
 button:-moz-focusring,input:-moz-focusring{outline:1px dotted ButtonText;}
-input{line-height:normal;}
+input{line-height:normal;-webkit-appearance:none;}
 input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}
 input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto;}
 input[type="search"]{-webkit-appearance:textfield;}
@@ -47,32 +50,44 @@ textarea{overflow:auto;vertical-align:top;resize:vertical;}
 optgroup{font-weight:bold;}
 /* normalize End */
 
-/* Base */
+/* Base *//*
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
 html,body{height:100%;}
 body{position:relative;background:#000;font:400 14px/1.5 "Segoe UI","Lucida Grande",'Helvetica Neue Ultra Light','Helvetica Neue Interface M3',Helvetica,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",Arial,sans-serif;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;}
 ::-webkit-input-placeholder{color:#a3a3c0;text-shadow:#fff 0 1px 0}
 a,button,.btn{-ms-touch-action:manipulation;-webkit-touch-action:manipulation;touch-action:manipulation;}
 input,button,select,textarea{outline:none}
-
 /* Base End */
+
+
+/* Base UI *//*
 #jqt{overflow:hidden;position:absolute;right:0;top:0;left:0;bottom:0;-webkit-text-size-adjust:none;-webkit-user-select:none;user-select:none;}
-#jqt >[data-ui=view]{left:0;top:0;min-height:100%;width:100%;overflow-x:hidden;position:absolute;z-index:0;display:-webkit-box;display:box;-webkit-box-orient:vertical;box-orient:vertical}
+#jqt >[data-ui=view]{left:0;top:0;z-index:0;min-height:100%;width:100%;overflow-x:hidden;position:absolute;z-index:0;display:-webkit-box;display:box;-webkit-box-orient:vertical;box-orient:vertical}
 #jqt >[data-ui=view]{background-color:#efeff4}
 #jqt >[data-ui=view].current{z-index:10}
 #jqt >[data-ui=view]:not(.current):not(.in):not(.out){display:none}
-
 #jqt .scroll{position:relative;-webkit-box-flex:1;box-flex:1;overflow:auto;-webkit-overflow-scrolling:touch;-webkit-margin-collapse:separate}
 
-#jqt.autoscroll:not(.animating3d)>[data-ui=view],#jqt.touchscroll:not(.animating3d)>[data-ui=view]{height:100%}
+header{position:absolute;top:0;left:0;right:0;
+background:#fff;border-bottom:1px solid #ccc;padding-top:20px;height:64px;}
+footer{position:absolute;bottom:0;left:0;right:0;
+background:#fff;border-top:1px solid #ccc;height:44px;}
+article{margin-top:64px;margin-bottom:44px;height:100%;}
 
+
+header h1,header h2,header h3{margin:0;}
+
+/* Base UI End */
+/*
+
+#jqt.autoscroll:not(.animating3d)>[data-ui=view],#jqt.touchscroll:not(.animating3d)>[data-ui=view]{height:100%}
 #jqt.supports3d{-webkit-perspective:1000}
 #jqt.supports3d>[data-ui=view]{-webkit-transform:translate3d(0,0,0) rotate(0) scale(1);transform:translate3d(0,0,0) rotate(0) scale(1)}
 #jqt .selectable,#jqt input,#jqt textarea{-webkit-user-select:auto;user-select:auto}
 #jqt.notransform{-webkit-transform:none!important;transform:none!important}
 
 
-/* jqt animation */
+/* jqt animation *//*
 #jqt .in,#jqt .out{-webkit-animation-duration:.15s;-webkit-animation-fill-mode:both;-webkit-animation-timing-function:ease-in-out;-moz-animation-duration:.15s;-moz-animation-fill-mode:both;-moz-animation-timing-function:ease-in-out;animation-duration:.2s;animation-fill-mode:both;animation-timing-function:ease-in-out}
 #jqt .in:after,#jqt .out:after{content:"";position:absolute;display:block;top:0;left:0;bottom:0;right:0}
 #jqt .in a,#jqt .in input,#jqt .out a,#jqt .out input{pointer-events:none}
@@ -334,7 +349,9 @@ input,button,select,textarea{outline:none}
 }
 /* jqt animation End */
 
-/* toolbar */
+
+
+/* toolbar *//*
 #jqt .toolbar{position:relative;z-index:10;background:#fff;border-bottom:1px solid #a7a7ab;-webkit-box-shadow:rgba(255,255,255,.3) 0 1px 0 inset;box-shadow:rgba(255,255,255,.3) 0 1px 0 inset;padding:10px;height:44px;font-weight:700;}
 #jqt.black-translucent .toolbar{padding-top:30px;height:64px}
 #jqt .toolbar h1,#jqt .toolbar h2{position:absolute;overflow:hidden;left:50%;bottom:9px;margin:1px 0 0 -75px;width:150px;font-size:17px;line-height:1.3em;text-align:center;text-overflow:ellipsis;white-space:nowrap;color:#262626;text-shadow:#fff 0 1px 0}
@@ -345,12 +362,12 @@ input,button,select,textarea{outline:none}
 #jqt .toolbar .back::before,#jqt .toolbar .cancel::before{border-style:solid;border-width:.2em .2em 0 0;position:relative;display:inline-block;top:30%;content:'';height:.6em;width:.6em;-webkit-transform:scale(0.9,1) rotate(225deg);transform:scale(0.9,1) rotate(225deg);vertical-align:top;margin-right:5px}
 /* toolbar End */
 
-/* button */
+/* button *//*
 #jqt .add,#jqt .back,#jqt .button,#jqt .cancel{position:absolute;overflow:hidden;width:auto;height:30px;font-family:inherit;font-size:12px;font-weight:700;line-height:30px;text-overflow:ellipsis;text-decoration:none;white-space:nowrap;background:0 0;bottom:6px;right:10px;margin:0;padding:0 10px;color:#0e0b0b;text-shadow:#fff 0 1px 0;border:1px solid #baabab;-webkit-border-radius:3px;border-radius:3px;background-image:none;background-color:#e8e3e3}
 #jqt .add.active,#jqt .back.active,#jqt .button.active,#jqt .cancel.active{border-color:#af9d9d;background-image:none;background-color:#ddd5d5;color:#000;}
 #jqt .back,#jqt .cancel,#jqt .leftButton{left:10px;right:auto}
 /* button End */
-
+/*
 a{padding:6px 10px;display:inline-block;}
 
 
