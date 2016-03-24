@@ -1,3 +1,22 @@
+// jQuery.noConflict();
+(function(ui){$(function(){
+ui(document).ready(function(){
+//function setViewHeight(){
+  ui('[data-ui=view]').each(function(){
+    if(ui(this).find('> header').length>0){
+      var headerH=ui(this).find('> header').outerHeight(true);
+    }else{var headerH=0;}
+    if(ui(this).find('> footer').length>0){
+      var footerH=ui(this).find('> footer').outerHeight(true);
+    }else{var footerH=0;}
+    var viewHeight=ui(window).height()-(headerH + footerH);
+    ui(this).find('> article').height(viewHeight);
+  });
+//}
+});
+});})(jQuery);
+
+
 var jQT=new $.jQT({startupScreen:'images/jqt_startup.png',preloadImages:[]});
 
 // Some sample Javascript functions:
