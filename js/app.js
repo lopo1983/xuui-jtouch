@@ -14,7 +14,7 @@ ui(document).ready(function(){
       var footerH=ui(this).find('> footer').outerHeight(true);
     }else{var footerH=0;}
     var viewHeight=ui(window).height()-(headerH+footerH);
-    ui(this).find('> article').height(viewHeight);
+    ui(this).find('> section').height(viewHeight);
   });
 //}
 });

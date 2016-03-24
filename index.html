@@ -34,13 +34,13 @@
 <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body id="jqt">
-  <section data-ui="view" id="home" class="current">
+  <article data-ui="view" id="home" class="current">
     <header data-ui="toolbar">
       <a class="pure-btn slideup" id="infoButton" href="#about">About</a>
-      <a class="pure-btn btn-left slidedown"  href="#main">M</a>
+      <a class="pure-btn btn-left"  href="#M">M</a>
       <h1>XUUI-jTouch</h1>
     </header>
-    <article class="scroll pure-menu">
+    <section class="scroll pure-menu">
       <ul class="pure-menu-list">
         <li class="pure-menu-item arrow"><a class="pure-menu-link" href="#ui">User Interface <small class="counter">5</small></a> </li>
         <li class="pure-menu-item arrow"><a class="pure-menu-link" href="#animations">Animations <small class="counter">7</small></a></li>
@@ -51,7 +51,7 @@
       </ul>
       <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
       <p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p><p>20</p>
-    </article>
+    </section>
     <footer data-ui="toolbar" class="pure-g">
         <div class="pure-u-1-5"><a class="pure-btn"  href="#main">footer</a></div>
         <div class="pure-u-1-5"><a class="pure-btn"  href="#main">footer</a></div>
@@ -59,26 +59,36 @@
         <div class="pure-u-1-5"><a class="pure-btn"  href="#main">footer</a></div>
         <div class="pure-u-1-5"><a class="pure-btn"  href="#main">footer</a></div>
     </footer>
-  </section>
+  </article>
   
-  <section data-ui="view" id="about">
+  <article data-ui="view" id="M">
     <header data-ui="toolbar">
       <a class="pure-btn back" href="#home">Home</a>
-      <h1>AJAX</h1>
+      <h1>M</h1>
     </header>
-    <article class="scroll">
+    <section class="scroll">
+      <p><strong>XUUI-jTouch</strong> Version 0.1 by <a href="http://xuui.net">By Xu.hel</a></p>
+    </section>
+  </article>
+  
+  <article data-ui="view" id="about">
+    <header data-ui="toolbar">
+      <a class="pure-btn back" href="#home">Home</a>
+      <h1>About</h1>
+    </header>
+    <section class="scroll">
       <p><img src="images/jqtouch.png" /></p>
       <p><strong>XUUI-jTouch</strong> Version 0.1 by <a href="http://xuui.net">By Xu.hel</a></p>
       <p><em>Create powerful mobile apps with<br> just HTML, CSS, and jQuery.</em></p>
-    </article>
-  </section>
+    </section>
+  </article>
   
-  <section data-ui="view" id="forms">
+  <article data-ui="view" id="forms">
     <header data-ui="toolbar">
       <a href="#" class="pure-btn back">Back</a>
       <h1>Forms</h1>
     </header>
-    <article class="scroll">
+    <section class="scroll">
     <form class="pure-form">
       <fieldset class="pure-group">
         <input type="text" class="pure-input-1" placeholder="Username">
@@ -167,8 +177,8 @@
         </li>
       </ul-->
     </form>
-    </article>
-  </section>
+    </section>
+  </article>
   
   <!--
   
