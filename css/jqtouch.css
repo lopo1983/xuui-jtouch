@@ -6,28 +6,55 @@ may be freely distributed under the MIT license.
 
 @charset "UTF-8";
 @import url(base.css);
+@import url(menus.css);
+@import url(buttons.css);
 @import url(forms.css);
 
 /* Base UI */
-
-/*
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
 html,body{height:100%;}
 html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
-body{position:relative;background:#000;font:400 14px/1.5 "Segoe UI","Lucida Grande",'Helvetica Neue Ultra Light','Helvetica Neue Interface M3',Helvetica,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",Arial,sans-serif;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;}
-::-webkit-input-placeholder{color:#a3a3c0;text-shadow:#fff 0 1px 0}
+body{position:relative;background:#000;font:400 14px/1.5 "Segoe UI","Lucida Grande",'Helvetica Neue Ultra Light','Helvetica Neue Interface M3',Helvetica,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",Arial,sans-serif;
+-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;}
 a,button,.btn{-ms-touch-action:manipulation;-webkit-touch-action:manipulation;touch-action:manipulation;}
 input,button,select,textarea{outline:none}
-
+::-webkit-input-placeholder{color:#a3a3c0;text-shadow:#fff 0 1px 0}
 
 /*
 #jqt{overflow:hidden;position:absolute;right:0;top:0;left:0;bottom:0;-webkit-text-size-adjust:none;-webkit-user-select:none;user-select:none;}
-#jqt >[data-ui=view]{left:0;top:0;z-index:0;min-height:100%;width:100%;overflow-x:hidden;position:absolute;z-index:0;display:-webkit-box;display:box;-webkit-box-orient:vertical;box-orient:vertical}
-#jqt >[data-ui=view]{background-color:#efeff4}
-#jqt >[data-ui=view].current{z-index:10}
-#jqt >[data-ui=view]:not(.current):not(.in):not(.out){display:none}
+*/
+
+[data-ui=view]{position:absolute;left:0;top:0;left:0;right:0;
+    background:#efeff4;
+    /*width:100%;*/
+    /*height:100%;*/
+    overflow:hidden;
+}
+
+[data-ui=view]{/*z-index:0;min-height:100%;width:100%;overflow-x:hidden;display:-webkit-box;display:box;-webkit-box-orient:vertical;box-orient:vertical*/}
+[data-ui=view].current{z-index:10}
+[data-ui=view]:not(.current):not(.in):not(.out){display:none}
+
 #jqt .scroll{position:relative;-webkit-box-flex:1;box-flex:1;overflow:auto;-webkit-overflow-scrolling:touch;-webkit-margin-collapse:separate}
 
+
+[data-ui=toolbar]{background:#fcfcfc;height:44px;}
+[data-ui=toolbar] h1,[data-ui=toolbar] h2,[data-ui=toolbar] h3{margin:0 44px;line-height:44px;text-align:center;font-size:20px;}
+[data-ui=toolbar] .pure-btn{position:absolute;z-index:1;top:7px;right:7px;}
+[data-ui=toolbar] .pure-btn.back{right:auto;left:7px;}
+
+
+
+
+header,footer{}
+/*
+
+
+
+
+/*
+
+header{top: 0;border-bottom:1px solid rgba(0,0,0,.16);}
 /*
 header{position:absolute;top:0;left:0;right:0;
 background:#fff;border-bottom:1px solid #ccc;padding-top:20px;height:64px;}
@@ -48,18 +75,22 @@ header h1,header h2,header h3{margin:0;}
 #jqt.notransform{-webkit-transform:none!important;transform:none!important}
 
 
-/* jqt animation *//*
-#jqt .in,#jqt .out{-webkit-animation-duration:.15s;-webkit-animation-fill-mode:both;-webkit-animation-timing-function:ease-in-out;-moz-animation-duration:.15s;-moz-animation-fill-mode:both;-moz-animation-timing-function:ease-in-out;animation-duration:.2s;animation-fill-mode:both;animation-timing-function:ease-in-out}
+/* jqt animation */
+#jqt .in,#jqt .out{-webkit-animation-duration:.2s;-moz-animation-duration:.2s;animation-duration:.2s;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-timing-function:ease-in-out;-moz-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}
 #jqt .in:after,#jqt .out:after{content:"";position:absolute;display:block;top:0;left:0;bottom:0;right:0}
 #jqt .in a,#jqt .in input,#jqt .out a,#jqt .out input{pointer-events:none}
 #jqt .in{z-index:10}
 #jqt .out{z-index:0!important}
+
+/*
 #jqt .fade.in{-webkit-animation-name:fadeIn;animation-name:fadeIn}
 #jqt .fade.out{z-index:10;-webkit-animation-name:fadeOut;animation-name:fadeOut}
 #jqt .dissolve.in{-webkit-animation-name:dissolveIn;animation-name:dissolveIn}
 #jqt .dissolve.out{-webkit-animation-name:dissolveOut;animation-name:dissolveOut}
 #jqt .pop.in{-webkit-animation-name:popIn;animation-name:popIn}
 #jqt .pop.out{-webkit-animation-name:popOut;animation-name:popOut}
+*/
+
 #jqt .slideleft.in{-webkit-animation-name:slideLeftIn;animation-name:slideLeftIn}
 #jqt .slideleft.out{-webkit-animation-name:slideLeftOut;animation-name:slideLeftOut}
 #jqt .slideright.in{-webkit-animation-name:slideRightIn;animation-name:slideRightIn}
@@ -69,6 +100,8 @@ header h1,header h2,header h3{margin:0;}
 #jqt .slidedown.in{-webkit-animation-name:slideDownIn;animation-name:slideDownIn}
 #jqt .slidedown.out{-webkit-animation-name:slideDownOut;animation-name:slideDownOut}
 #jqt .slidedown,#jqt .slideleft,#jqt .slideright,#jqt .slideup{-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}
+
+/*
 #jqt .flipleft{-webkit-backface-visibility:hidden;backface-visibility:hidden}
 #jqt .flipleft.in{-webkit-animation-name:flipLeftIn;animation-name:flipLeftIn}
 #jqt .flipleft.out{-webkit-animation-name:flipLeftOut;animation-name:flipLeftOut}
@@ -110,37 +143,73 @@ header h1,header h2,header h3{margin:0;}
 5%{-webkit-transform:scale(1);opacity:1}
 100%{-webkit-transform:scale(0.2);opacity:0}
 }
+*/
+
 @-webkit-keyframes slideLeftIn{
-0%{-webkit-transform:translateX(90%)}
-100%{-webkit-transform:translateX(0)}
+0%{-webkit-transform:translate3d(50%,0,0)}
+100%{-webkit-transform:translate3d(0,0,0)}
+}
+@keyframes slideLeftIn{
+0%{transform:translate3d(50%,0,0)}
+100%{transform:translate3d(0,0,0)}
 }
 @-webkit-keyframes slideLeftOut{
-0%{-webkit-transform:translateX(-10%)}
-100%{-webkit-transform:translateX(-100%)}
+0%{-webkit-transform:translate3d(-10%,0,0)}
+100%{-webkit-transform:translate3d(-100%,0,0)}
+}
+@keyframes slideLeftOut{
+0%{transform:translate3d(-10%,0,0)}
+100%{transform:translate3d(-100%,0,0)}
 }
 @-webkit-keyframes slideRightIn{
-0%{-webkit-transform:translateX(-90%)}
-100%{-webkit-transform:translateX(0)}
+0%{-webkit-transform:translate3d(-50%,0,0)}
+100%{-webkit-transform:translate3d(0,0,0)}
+}
+@keyframes slideRightIn{
+0%{transform:translate3d(-50%,0,0)}
+100%{transform:translate3d(0,0,0)}
 }
 @-webkit-keyframes slideRightOut{
-0%{-webkit-transform:translateX(10%)}
-100%{-webkit-transform:translateX(100%)}
+0%{-webkit-transform:translate3d(10%,0,0)}
+100%{-webkit-transform:translate3d(100%,0,0)}
+}
+@keyframes slideRightOut{
+0%{transform:translate3d(10%,0,0)}
+100%{transform:translate3d(100%,0,0)}
 }
 @-webkit-keyframes slideUpIn{
-20%{-webkit-transform:translateY(80%)}
-100%{-webkit-transform:translateY(0%)}
+20%{-webkit-transform:translate3d(0,50%,0)}
+100%{-webkit-transform:translate3d(0,0%,0)}
+}
+@keyframes slideUpIn{
+20%{transform:translate3d(0,50%,0)}
+100%{transform:translate3d(0,0%,0)}
 }
 @-webkit-keyframes slideUpOut{
-20%{-webkit-transform:translateY(-20%)}
-100%{-webkit-transform:translateY(-100%)}
+20%{-webkit-transform:translate3d(0,-20%,0)}
+100%{-webkit-transform:translate3d(0,-100%,0)}
+}
+@keyframes slideUpOut{
+20%{transform:translate3d(0,-20%,0)}
+100%{transform:translate3d(0,-100%,0)}
 }
 @-webkit-keyframes slideDownIn{
-0%{-webkit-transform:translateY(-80%)}
-100%{-webkit-transform:translateY(0%)}}
-@-webkit-keyframes slideDownOut{
-0%{-webkit-transform:translateY(20%)}
-100%{-webkit-transform:translateY(100%)}
+0%{-webkit-transform:translate3d(0,-50%,0)}
+100%{-webkit-transform:translate3d(0,0%,0)}
 }
+@keyframes slideDownIn{
+0%{transform:translate3d(0,-50%,0)}
+100%{transform:translate3d(0,0%,0)}
+}
+@-webkit-keyframes slideDownOut{
+0%{-webkit-transform:translate3d(0,20%,0)}
+100%{-webkit-transform:translate3d(0,100%,0)}
+}
+@keyframes slideDownOut{
+0%{transform:translate3d(0,20%,0)}
+100%{transform:translate3d(0,100%,0)}
+}
+/*
 @-webkit-keyframes flipLeftIn{
 0%{opacity:0}
 5%{opacity:1;-webkit-transform:rotateY(180deg) scale(0.8)}
@@ -221,37 +290,10 @@ header h1,header h2,header h3{margin:0;}
 5%{transform:scale(1);opacity:1}
 100%{transform:scale(0.2);opacity:0}
 }
-@keyframes slideLeftIn{
-0%{transform:translateX(90%)}
-100%{transform:translateX(0)}
-}
-@keyframes slideLeftOut{
-0%{transform:translateX(-10%)}
-100%{transform:translateX(-100%)}
-}
-@keyframes slideRightIn{
-0%{transform:translateX(-90%)}
-100%{transform:translateX(0)}
-}
-@keyframes slideRightOut{
-0%{transform:translateX(10%)}
-100%{transform:translateX(100%)}
-}
-@keyframes slideUpIn{
-20%{transform:translateY(80%)}
-100%{transform:translateY(0%)}
-}
-@keyframes slideUpOut{
-20%{transform:translateY(-20%)}
-100%{transform:translateY(-100%)}
-}
-@keyframes slideDownIn{
-0%{transform:translateY(-80%)}
-100%{transform:translateY(0%)}}
-@keyframes slideDownOut{
-0%{transform:translateY(20%)}
-100%{transform:translateY(100%)}
-}
+*/
+
+
+/*
 @keyframes flipLeftIn{
 0%{opacity:0}
 5%{opacity:1;transform:rotateY(180deg) scale(0.8)}

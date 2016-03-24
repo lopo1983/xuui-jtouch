@@ -34,38 +34,139 @@
 <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body id="jqt">
-  <div data-ui="view" id="home" class="current">
-    <header data-ui="toolbar" class="toolbar_">
+  <section data-ui="view" id="home" class="current">
+    <header data-ui="toolbar">
+      <a class="pure-btn slideup" id="infoButton" href="#about">About</a>
       <h1>XUUI-jTouch</h1>
-      <a class="button slideup" id="infoButton" href="#about">About</a>
     </header>
-    <article>
-    <div class="scroll">
-      <ul class="rounded">
-        <li class="arrow"><a href="#ui">User Interface <small class="counter">5</small></a> </li>
-        <li class="arrow"><a href="#animations">Animations <small class="counter">7</small></a></li>
-        <li class="arrow"><a href="#ajax">AJAX <small class="counter">4</small></a></li>
-        <li class="arrow"><a href="#callbacks">Events <small class="counter">4</small></a></li>
-        <li class="arrow"><a href="#extensions">Extensions <small class="counter">4</small></a> </li>
+    <article class="scroll pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item arrow"><a class="pure-menu-link" href="#ui">User Interface <small class="counter">5</small></a> </li>
+        <li class="pure-menu-item arrow"><a class="pure-menu-link" href="#animations">Animations <small class="counter">7</small></a></li>
+        <li class="pure-menu-item arrow"><a class="pure-menu-link" href="#ajax">AJAX <small class="counter">4</small></a></li>
+        <li class="pure-menu-item arrow"><a class="pure-menu-link" href="#callbacks">Events <small class="counter">4</small></a></li>
+        <li class="pure-menu-item arrow"><a class="pure-menu-link" href="#extensions">Extensions <small class="counter">4</small></a> </li>
+        <li class="pure-menu-item arrow"><a class="pure-menu-link" href="#forms">forms <small class="counter">4</small></a> </li>
       </ul>
-    </div>
-        
+      <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
+      <p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p><p>20</p>
     </article>
-    <footer>
+    <footer data-ui="toolbar">
         footer
     </footer>
-  </div>
-  <div data-ui="view" id="about">
-    <div class="toolbar">
+  </section>
+  
+  <section data-ui="view" id="about">
+    <header data-ui="toolbar">
+      <a class="pure-btn back" href="#home">Home</a>
       <h1>AJAX</h1>
-      <a class="back" href="#home">Home</a>
-    </div>
-    <div class="scroll">
+    </header>
+    <article class="scroll">
       <p><img src="images/jqtouch.png" /></p>
       <p><strong>XUUI-jTouch</strong> Version 0.1 by <a href="http://xuui.net">By Xu.hel</a></p>
       <p><em>Create powerful mobile apps with<br> just HTML, CSS, and jQuery.</em></p>
-    </div>
-  </div>
+    </article>
+  </section>
+  
+  <section data-ui="view" id="forms">
+    <header data-ui="toolbar">
+      <a href="#" class="pure-btn back">Back</a>
+      <h1>Forms</h1>
+    </header>
+    <article class="scroll">
+    <form class="pure-form">
+      <fieldset class="pure-group">
+        <input type="text" class="pure-input-1" placeholder="Username">
+        <input type="text" class="pure-input-1" placeholder="Password">
+        <input type="email" class="pure-input-1" placeholder="Email">
+      </fieldset>
+      <fieldset class="pure-group">
+        <input type="text" class="pure-input-1" placeholder="A title">
+        <textarea class="pure-input-1" placeholder="Textareas work too"></textarea>
+      </fieldset>
+      <fieldset>
+        <label for="state">State</label>
+        <select id="state" class="pure-input-1">
+          <option>AL</option>
+          <option>CA</option>
+          <option>IL</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <input type="text" class="pure-input-rounded">
+        <button type="submit" class="pure-btn">Search</button>
+      </fieldset>
+      <fieldset>
+        <legend>A compact inline form</legend>
+        <label for="remember">
+          <input id="remember" type="checkbox"> Remember me
+        </label>
+      </fieldset>
+      <button type="submit" class="pure-btn pure-input-1 pure-btn-primary">Sign in</button>
+
+      <!--ul class="edit rounded">
+        <li>
+          <input type="text" name="name" placeholder="Text" id="some_name" />
+        </li>
+        <li>
+          <input type="search" name="search" placeholder="Search" id="some_name" />
+        </li>
+        <li>
+          <input type="tel" name="phone" placeholder="Phone" id="some_name" />
+        </li>
+        <li>
+          <input type="number" pattern="[0-9]*" name="number" placeholder="Numbers" id="some_name" />
+        </li>
+        <li>
+          <input type="number" name="zip" placeholder="Numbers 2" id="some_name" />
+        </li>
+        <li>
+          <input type="email" name="email" placeholder="Email" id="some_name" />
+        </li>
+        <li>
+          <input type="url" name="url" placeholder="Url" id="some_name" />
+        </li>
+        <li>
+          <textarea placeholder="Textarea"></textarea>
+        </li>
+        <li>Sample Toggle <span class="toggle"><input type="checkbox" /></span></li>
+        <li>Toggle Style 2
+          <input type="checkbox" class="toggle" />
+        </li>
+        <li class="arrow">
+          <select id="lol">
+            <optgroup label="Swedish Cars">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+            </optgroup>
+            <optgroup label="German Cars">
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </optgroup>
+          </select>
+        </li>
+        <li>
+          <input type="password" name="some_name" value="iphonedelcopon" id="some_name" />
+        </li>
+        <li>
+          <input type="checkbox" name="food" value="punch" title="Punch" />
+        </li>
+        <li>
+          <input type="checkbox" name="food" value="pie" checked="checked" title="Pie" />
+        </li>
+        <li>
+          <input type="radio" name="bag" value="paper" title="Paper" />
+        </li>
+        <li>
+          <input type="radio" name="bag" value="plastic" title="Plastic" />
+        </li>
+      </ul-->
+    </form>
+    </article>
+  </section>
+  
+  <!--
+  
   <div data-ui="view" id="ajax">
     <div class="toolbar">
       <h1>AJAX</h1>
@@ -73,10 +174,10 @@
     </div>
     <div class="scroll">
       <ul class="rounded">
-        <li class="arrow"><a href="#ajax_post">POST Form Example</a></li>
-        <li class="arrow"><a href="ajax.html">GET Example</a></li>
-        <li class="arrow"><a href="ajax_long.html">Long GET Example</a></li>
-        <li class="arrow"><a href="#callback">With Callback</a></li>
+        <li class="pure-menu-item arrow"><a href="#ajax_post">POST Form Example</a></li>
+        <li class="pure-menu-item arrow"><a href="ajax.html">GET Example</a></li>
+        <li class="pure-menu-item arrow"><a href="ajax_long.html">Long GET Example</a></li>
+        <li class="pure-menu-item arrow"><a href="#callback">With Callback</a></li>
       </ul>
     </div>
   </div>
@@ -158,10 +259,10 @@
       <li><a href="#">Flintstone, <em>Pebble</em> <small class="counter">42</small></a></li>
       <li><a href="#">Flintstone, <em>Wilma</em></a></li>
       <li class="sep">J</li>
-      <li class="arrow"><a href="#">Jetson, <em>Elroy</em> <small>Label</small></a></li>
-      <li class="arrow"><a href="#">Jetson, <em>George</em> <small class="counter">42</small></a></li>
-      <li class="arrow"><a href="#">Jetson, <em>Jane</em></a></li>
-      <li class="arrow"><a href="#">Jetson, <em>Judy</em></a></li>
+      <li class="pure-menu-item arrow"><a href="#">Jetson, <em>Elroy</em> <small>Label</small></a></li>
+      <li class="pure-menu-item arrow"><a href="#">Jetson, <em>George</em> <small class="counter">42</small></a></li>
+      <li class="pure-menu-item arrow"><a href="#">Jetson, <em>Jane</em></a></li>
+      <li class="pure-menu-item arrow"><a href="#">Jetson, <em>Judy</em></a></li>
       <li class="sep">R</li>
       <li class="forward"><a href="#">Rubble, <em>Bambam</em> <small>Label</small></a></li>
       <li class="forward"><a href="#">Rubble, <em>Barney</em> <small class="counter">42</small></a></li>
@@ -182,82 +283,18 @@
       </ul>
     </div>
   </div>
-  <div data-ui="view" id="forms">
-    <div class="toolbar">
-      <h1>Forms</h1>
-      <a href="#" class="back">Back</a>
-    </div>
-    <form class="scroll">
-      <ul class="edit rounded">
-        <li>
-          <input type="text" name="name" placeholder="Text" id="some_name" />
-        </li>
-        <li>
-          <input type="search" name="search" placeholder="Search" id="some_name" />
-        </li>
-        <li>
-          <input type="tel" name="phone" placeholder="Phone" id="some_name" />
-        </li>
-        <li>
-          <input type="number" pattern="[0-9]*" name="number" placeholder="Numbers" id="some_name" />
-        </li>
-        <li>
-          <input type="number" name="zip" placeholder="Numbers 2" id="some_name" />
-        </li>
-        <li>
-          <input type="email" name="email" placeholder="Email" id="some_name" />
-        </li>
-        <li>
-          <input type="url" name="url" placeholder="Url" id="some_name" />
-        </li>
-        <li>
-          <textarea placeholder="Textarea"></textarea>
-        </li>
-        <li>Sample Toggle <span class="toggle"><input type="checkbox" /></span></li>
-        <li>Toggle Style 2
-          <input type="checkbox" class="toggle" />
-        </li>
-        <li class="arrow">
-          <select id="lol">
-            <optgroup label="Swedish Cars">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-            </optgroup>
-            <optgroup label="German Cars">
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
-            </optgroup>
-          </select>
-        </li>
-        <li>
-          <input type="password" name="some_name" value="iphonedelcopon" id="some_name" />
-        </li>
-        <li>
-          <input type="checkbox" name="food" value="punch" title="Punch" />
-        </li>
-        <li>
-          <input type="checkbox" name="food" value="pie" checked="checked" title="Pie" />
-        </li>
-        <li>
-          <input type="radio" name="bag" value="paper" title="Paper" />
-        </li>
-        <li>
-          <input type="radio" name="bag" value="plastic" title="Plastic" />
-        </li>
-      </ul>
-    </form>
-  </div>
+  
   <div data-ui="view" id="metal">
     <div class="toolbar">
       <h1>Metal Lists</h1>
       <a href="#" class="back">Back</a>
     </div>
     <ul class="metal scroll">
-      <li class="arrow"><a href="#"><small>AM</small> 9:40 <em>Buenos Aires</em></a></li>
-      <li class="arrow"><a href="#"><small>PM</small> 19:40 <em>Singapore</em></a></li>
-      <li class="arrow"><a href="#"><small>PM</small> 22:40 <em>Japan</em></a></li>
-      <li class="arrow"><a href="#"><small>PM</small> 11:40 <em>New York</em></a></li>
-      <li class="arrow"><a href="#"><small>PM</small> 9:40 <em>Ontario</em></a></li>
+      <li class="pure-menu-item arrow"><a href="#"><small>AM</small> 9:40 <em>Buenos Aires</em></a></li>
+      <li class="pure-menu-item arrow"><a href="#"><small>PM</small> 19:40 <em>Singapore</em></a></li>
+      <li class="pure-menu-item arrow"><a href="#"><small>PM</small> 22:40 <em>Japan</em></a></li>
+      <li class="pure-menu-item arrow"><a href="#"><small>PM</small> 11:40 <em>New York</em></a></li>
+      <li class="pure-menu-item arrow"><a href="#"><small>PM</small> 9:40 <em>Ontario</em></a></li>
     </ul>
   </div>
   <div data-ui="view" id="pageevents">
@@ -274,8 +311,8 @@
       <a href="#" class="back">Back</a>
     </div>
     <ul class="plastic scroll">
-      <li class="arrow"><a href="#">Simple list <small>Label</small></a></li>
-      <li class="arrow"><a href="#">Contact list <small class="counter">42</small></a></li>
+      <li class="pure-menu-item arrow"><a href="#">Simple list <small>Label</small></a></li>
+      <li class="pure-menu-item arrow"><a href="#">Contact list <small class="counter">42</small></a></li>
       <li class="forward"><a href="#">Content List</a></li>
       <li><a href="#">Metal list</a></li>
     </ul>
@@ -288,22 +325,22 @@
     <div class="scroll">
       <h2>Lists</h2>
       <ul class="rounded">
-        <li class="arrow"><a href="#edge">Edge to Edge</a></li>
-        <li class="arrow"><a href="#plastic">Plastic</a></li>
-        <li class="arrow"><a href="#metal">Metal</a></li>
+        <li class="pure-menu-item arrow"><a href="#edge">Edge to Edge</a></li>
+        <li class="pure-menu-item arrow"><a href="#plastic">Plastic</a></li>
+        <li class="pure-menu-item arrow"><a href="#metal">Metal</a></li>
       </ul>
       <h2>Buttons</h2>
       <ul class="rounded">
-        <li class="arrow"><a href="#buttons">Buttons</a></li>
+        <li class="pure-menu-item arrow"><a href="#buttons">Buttons</a></li>
       </ul>
       <h2>Forms</h2>
       <ul class="rounded">
-        <li class="arrow"><a href="#forms">Forms</a></li>
+        <li class="pure-menu-item arrow"><a href="#forms">Forms</a></li>
       </ul>
       <h2>Sheets</h2>
       <ul class="rounded">
-        <li class="arrow"><a class="action" href="#actionsheet">Action</a></li>
-        <li class="arrow"><a class="menu" href="#menusheet">Menu</a></li>
+        <li class="pure-menu-item arrow"><a class="action" href="#actionsheet">Action</a></li>
+        <li class="pure-menu-item arrow"><a class="menu" href="#menusheet">Menu</a></li>
       </ul>
     </div>
   </div>
@@ -362,5 +399,6 @@
       <a style="margin-top: 10px; margin-bottom: 10px; color:rgba(0,0,0,.9)" href="#" class="submit whiteButton">Submit</a>
     </div>
   </form>
+  -->
 </body>
 </html>
