@@ -8,12 +8,20 @@
 <meta name="renderer" content="webkit">
 <meta name="description" content="">
 <meta name="keywords" content="">
-<title>XUUI-jTouch</title>
+<meta name="theme-color" content="#00bcd4">
 <meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><!-- default or black-->
+<title>XUUI-jTouch</title>
 <!--link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon.ico"-->
 <link rel="icon" type="image/png" href="images/jqtouch.png">
 <link rel="icon" sizes="192x192" href="images/jqtouch4.png">
+
+<link rel="apple-touch-icon" href="touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+<link rel="apple-touch-startup-image" href="startup.png">
 
 <!--link rel="stylesheet" href="css/jqtouch.min.css" data-jqt-theme-->
 <link rel="stylesheet" href="css/jqtouch.css">
@@ -89,94 +97,94 @@
       <h1>Forms</h1>
     </header>
     <section class="scroll">
-    <form class="pure-form">
-      <fieldset class="pure-group">
-        <input type="text" class="pure-input-1" placeholder="Username">
-        <input type="text" class="pure-input-1" placeholder="Password">
-        <input type="email" class="pure-input-1" placeholder="Email">
-      </fieldset>
-      <fieldset class="pure-group">
-        <input type="text" class="pure-input-1" placeholder="A title">
-        <textarea class="pure-input-1" placeholder="Textareas work too"></textarea>
-      </fieldset>
-      <fieldset>
-        <label for="state">State</label>
-        <select id="state" class="pure-input-1">
-          <option>AL</option>
-          <option>CA</option>
-          <option>IL</option>
-        </select>
-      </fieldset>
-      <fieldset>
-        <input type="text" class="pure-input-rounded">
-        <button type="submit" class="pure-btn">Search</button>
-      </fieldset>
-      <fieldset>
-        <legend>A compact inline form</legend>
-        <label for="remember">
-          <input id="remember" type="checkbox"> Remember me
-        </label>
-      </fieldset>
-      <button type="submit" class="pure-btn pure-input-1 pure-btn-primary">Sign in</button>
-
-      <!--ul class="edit rounded">
-        <li>
-          <input type="text" name="name" placeholder="Text" id="some_name" />
-        </li>
-        <li>
-          <input type="search" name="search" placeholder="Search" id="some_name" />
-        </li>
-        <li>
-          <input type="tel" name="phone" placeholder="Phone" id="some_name" />
-        </li>
-        <li>
-          <input type="number" pattern="[0-9]*" name="number" placeholder="Numbers" id="some_name" />
-        </li>
-        <li>
-          <input type="number" name="zip" placeholder="Numbers 2" id="some_name" />
-        </li>
-        <li>
-          <input type="email" name="email" placeholder="Email" id="some_name" />
-        </li>
-        <li>
-          <input type="url" name="url" placeholder="Url" id="some_name" />
-        </li>
-        <li>
-          <textarea placeholder="Textarea"></textarea>
-        </li>
-        <li>Sample Toggle <span class="toggle"><input type="checkbox" /></span></li>
-        <li>Toggle Style 2
-          <input type="checkbox" class="toggle" />
-        </li>
-        <li class="arrow">
-          <select id="lol">
-            <optgroup label="Swedish Cars">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-            </optgroup>
-            <optgroup label="German Cars">
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
-            </optgroup>
+      <form class="pure-form">
+        <fieldset class="pure-group">
+          <input type="text" class="pure-input-1" placeholder="Username">
+          <input type="text" class="pure-input-1" placeholder="Password">
+          <input type="email" class="pure-input-1" placeholder="Email">
+        </fieldset>
+        <fieldset class="pure-group">
+          <input type="text" class="pure-input-1" placeholder="A title">
+          <textarea class="pure-input-1" placeholder="Textareas work too"></textarea>
+        </fieldset>
+        <fieldset>
+          <label for="state">State</label>
+          <select id="state" class="pure-input-1">
+            <option>AL</option>
+            <option>CA</option>
+            <option>IL</option>
           </select>
-        </li>
-        <li>
-          <input type="password" name="some_name" value="iphonedelcopon" id="some_name" />
-        </li>
-        <li>
-          <input type="checkbox" name="food" value="punch" title="Punch" />
-        </li>
-        <li>
-          <input type="checkbox" name="food" value="pie" checked="checked" title="Pie" />
-        </li>
-        <li>
-          <input type="radio" name="bag" value="paper" title="Paper" />
-        </li>
-        <li>
-          <input type="radio" name="bag" value="plastic" title="Plastic" />
-        </li>
-      </ul-->
-    </form>
+        </fieldset>
+        <fieldset>
+          <input type="text" class="pure-input-rounded">
+          <button type="submit" class="pure-btn">Search</button>
+        </fieldset>
+        <fieldset>
+          <legend>A compact inline form</legend>
+          <label for="remember">
+            <input id="remember" type="checkbox"> Remember me
+          </label>
+        </fieldset>
+        <button type="submit" class="pure-btn pure-input-1 pure-btn-primary">Sign in</button>
+
+        <ul class="edit rounded">
+          <li>
+            <input type="text" name="name" placeholder="Text" id="some_name" />
+          </li>
+          <li>
+            <input type="search" name="search" placeholder="Search" id="some_name" />
+          </li>
+          <li>
+            <input type="tel" name="phone" placeholder="Phone" id="some_name" />
+          </li>
+          <li>
+            <input type="number" pattern="[0-9]*" name="number" placeholder="Numbers" id="some_name" />
+          </li>
+          <li>
+            <input type="number" name="zip" placeholder="Numbers 2" id="some_name" />
+          </li>
+          <li>
+            <input type="email" name="email" placeholder="Email" id="some_name" />
+          </li>
+          <li>
+            <input type="url" name="url" placeholder="Url" id="some_name" />
+          </li>
+          <li>
+            <textarea placeholder="Textarea"></textarea>
+          </li>
+          <li>Sample Toggle <span class="toggle"><input type="checkbox" /></span></li>
+          <li>Toggle Style 2
+            <input type="checkbox" class="toggle" />
+          </li>
+          <li class="arrow">
+            <select id="lol">
+              <optgroup label="Swedish Cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+              </optgroup>
+              <optgroup label="German Cars">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </optgroup>
+            </select>
+          </li>
+          <li>
+            <input type="password" name="some_name" value="iphonedelcopon" id="some_name" />
+          </li>
+          <li>
+            <input type="checkbox" name="food" value="punch" title="Punch" />
+          </li>
+          <li>
+            <input type="checkbox" name="food" value="pie" checked="checked" title="Pie" />
+          </li>
+          <li>
+            <input type="radio" name="bag" value="paper" title="Paper" />
+          </li>
+          <li>
+            <input type="radio" name="bag" value="plastic" title="Plastic" />
+          </li>
+        </ul>
+      </form>
     </section>
   </article>
   

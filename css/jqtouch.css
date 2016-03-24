@@ -399,5 +399,5 @@ position:absolute;right:10px;left:auto;margin-top:6px;top:0
 
 */
 /* Test Skin */
-header[data-ui=toolbar]{background:rgb(0,188,212);color:#fff;}
+header[data-ui=toolbar]{background:#00bcd4;color:#fff;}
 header[data-ui=toolbar] .pure-btn{background:none;border:1px solid #fff;color:#fff;}
