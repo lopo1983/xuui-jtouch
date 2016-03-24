@@ -474,8 +474,8 @@
           support = $.support || {};
           $.extend(support, {
             animationEvents: typeof window.WebKitAnimationEvent !== "undefined",
-            touch: (typeof window.TouchEvent !== "undefined") && (window.navigator.userAgent.indexOf("Mobile") > -1) && _this.settings.useFastTouch,
-            transform3d: function() {
+            touch: (typeof window.TouchEvent !== "undefined") && (window.navigator.userAgent.indexOf("Mobile") > -1) && _this.settings.useFastTouch//,
+            /*transform3d: function() {
               var body, div, head, result, style;
               head = $head.get(0);
               body = document.body;
@@ -490,14 +490,16 @@
               div.parentNode.removeChild(div);
               console.warn("Support for 3d transforms: " + result + ".");
               return result;
-            }
+            }*/
           });
           if (!support.touch) {
             console.warn("This device does not support touch interaction, or it has been deactivated by the developer. Some features might be unavailable.");
           }
+          /*
           if (!support.transform3d) {
             console.warn("This device does not support 3d animation. 2d animations will be used instead.");
           }
+          */
           _ref = _this.extensions;
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
             extFn = _ref[_i];
@@ -513,9 +515,11 @@
             console.warn("Could not find an element with the id “jqt”, so the body id has been set to \"jqt\". If you are having any problems, wrapping your panels in a div with the id “jqt” might help.");
             $body = $(document.body).attr("id", "jqt");
           }
+          /*
           if (support.transform3d) {
             anatomyLessons.push("supports3d");
           }
+          */
           anatomyLessons.push(_this.settings.useTouchScroll ? 'touchscroll' : 'autoscroll');
           if (_this.settings.fullScreenClass && window.navigator.standalone) {
             anatomyLessons.push(_this.settings.fullScreenClass, _this.settings.statusBar);
@@ -701,12 +705,14 @@
           });
           if (support.animationEvents && animation && _this.settings.useAnimations) {
             finalAnimationName = animation.name;
-            is3d = animation.is3d ? " animating3d" : "";
+            //is3d = animation.is3d ? " animating3d" : "";
+            /*
             if (!support.transform3d && animation.is3d) {
               console.warn("Did not detect support for 3d animations, falling back to " + _this.settings.defaultAnimation + ".");
               finalAnimationName = _this.settings.defaultAnimation;
               is3d = '';
             }
+            */
             if (goingBack) {
               finalAnimationName = finalAnimationName.replace(/left|right|up|down|in|out/, reverseAnimation);
             }
