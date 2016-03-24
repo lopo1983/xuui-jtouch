@@ -83,7 +83,7 @@ header h1,header h2,header h3{margin:0;}
 
 
 /* jqt animation */
-#jqt .in,#jqt .out{-webkit-animation-duration:.3s;-moz-animation-duration:.3s;animation-duration:.3s;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-timing-function:ease-in-out;-moz-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}
+#jqt .in,#jqt .out{-webkit-animation-duration:.27s;-moz-animation-duration:.27s;animation-duration:.27s;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-timing-function:ease-in-out;-moz-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}
 #jqt .in:after,#jqt .out:after{content:"";position:absolute;display:block;top:0;left:0;bottom:0;right:0}
 #jqt .in a,#jqt .in input,#jqt .out a,#jqt .out input{pointer-events:none}
 #jqt .in{z-index:10}
@@ -101,11 +101,11 @@ header h1,header h2,header h3{margin:0;}
 #jqt .slideleft.in{-webkit-animation-name:slideLeftIn;animation-name:slideLeftIn}
 #jqt .slideleft.out{-webkit-animation-name:slideLeftOut;animation-name:slideLeftOut}
 #jqt .slideright.in{-webkit-animation-name:slideRightIn;animation-name:slideRightIn}
-#jqt .slideright.out{-webkit-animation-name:slideRightOut;animation-name:slideRightOut}
-#jqt .slideup.in{-webkit-animation-name:slideUpIn;animation-name:slideUpIn}
+#jqt .slideright.out{-webkit-animation-name:slideRightOut;animation-name:slideRightOut;z-index:11!important}
+#jqt .slideup.in{-webkit-animation-name:slideUpIn;animation-name:slideUpIn;}
 #jqt .slideup.out{-webkit-animation-name:slideUpOut;animation-name:slideUpOut}
 #jqt .slidedown.in{-webkit-animation-name:slideDownIn;animation-name:slideDownIn}
-#jqt .slidedown.out{-webkit-animation-name:slideDownOut;animation-name:slideDownOut}
+#jqt .slidedown.out{-webkit-animation-name:slideDownOut;animation-name:slideDownOut;z-index:11!important}
 #jqt .slidedown,#jqt .slideleft,#jqt .slideright,#jqt .slideup{-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}
 
 /*
@@ -178,43 +178,43 @@ header h1,header h2,header h3{margin:0;}
 }
 @-webkit-keyframes slideRightOut{
 0%{-webkit-transform:translate3d(10%,0,0)}
-100%{-webkit-transform:translate3d(50%,0,0)}
+100%{-webkit-transform:translate3d(100%,0,0)}
 }
 @keyframes slideRightOut{
 0%{transform:translate3d(10%,0,0)}
-100%{transform:translate3d(50%,0,0)}
+100%{transform:translate3d(100%,0,0)}
 }
 @-webkit-keyframes slideUpIn{
-20%{-webkit-transform:translate3d(0,50%,0)}
+20%{-webkit-transform:translate3d(0,100%,0)}
 100%{-webkit-transform:translate3d(0,0%,0)}
 }
 @keyframes slideUpIn{
-20%{transform:translate3d(0,50%,0)}
+20%{transform:translate3d(0,100%,0)}
 100%{transform:translate3d(0,0%,0)}
 }
 @-webkit-keyframes slideUpOut{
-20%{-webkit-transform:translate3d(0,-20%,0)}
-100%{-webkit-transform:translate3d(0,-50%,0)}
+20%{-webkit-transform:translate3d(0,0%,0)}
+100%{-webkit-transform:translate3d(0,-10%,0)}
 }
 @keyframes slideUpOut{
-20%{transform:translate3d(0,-20%,0)}
-100%{transform:translate3d(0,-50%,0)}
+20%{transform:translate3d(0,0%,0)}
+100%{transform:translate3d(0,-10%,0)}
 }
 @-webkit-keyframes slideDownIn{
-0%{-webkit-transform:translate3d(0,-50%,0)}
+0%{-webkit-transform:translate3d(0,-20%,0)}
 100%{-webkit-transform:translate3d(0,0%,0)}
 }
 @keyframes slideDownIn{
-0%{transform:translate3d(0,-50%,0)}
+0%{transform:translate3d(0,-20%,0)}
 100%{transform:translate3d(0,0%,0)}
 }
 @-webkit-keyframes slideDownOut{
-0%{-webkit-transform:translate3d(0,20%,0)}
-100%{-webkit-transform:translate3d(0,50%,0)}
+0%{-webkit-transform:translate3d(0,0%,0)}
+100%{-webkit-transform:translate3d(0,100%,0)}
 }
 @keyframes slideDownOut{
-0%{transform:translate3d(0,20%,0)}
-100%{transform:translate3d(0,50%,0)}
+0%{transform:translate3d(0,0%,0)}
+100%{transform:translate3d(0,100%,0)}
 }
 /*
 @-webkit-keyframes flipLeftIn{
