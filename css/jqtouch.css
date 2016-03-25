@@ -27,7 +27,7 @@ input,button,select,textarea{outline:none}
 */
 
 [data-ui=view]{position:absolute;left:0;top:0;left:0;right:0;overflow:hidden;background:#efefef;
-    box-shadow:0 0 3px 1px rgba(0,0,0,.34);
+    box-shadow:0 0 3px 1px rgba(0,0,0,.13);
 }
 
 [data-ui=view]{/*z-index:0;min-height:100%;width:100%;overflow-x:hidden;display:-webkit-box;display:box;-webkit-box-orient:vertical;box-orient:vertical*/}
@@ -124,6 +124,6 @@ position:absolute;right:10px;left:auto;margin-top:6px;top:0
 
 */
 /* Test Skin */
-header[data-ui=toolbar]{background:#00bcd4;color:#fff;}
+header[data-ui=toolbar]{background:#009688;color:#fff;}
 header[data-ui=toolbar] .pure-btn{background:none;border:1px solid #fff;color:#fff;}
 .pure-form{margin:0 16px;}

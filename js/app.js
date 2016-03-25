@@ -50,7 +50,11 @@ $(function(){
   }).bind('pageAnimationEnd',function(e,info){
     $(this).find('.info').append('Finished animating '+info.direction+'.<br><br>');
   });
-
+  
+  $('#animdemo').bind('pageAnimationStart',function(e,info){
+    $(this).find('h2.vtitle').html($(this).data('referrer').data('title'));
+  });
+  
   // Page animations end with AJAX callback event,example 1(load remote HTML only first time)
   $('#callback').bind('pageAnimationEnd',function(e,info){
     // Make sure the data hasn't already been loaded(we'll set 'loaded' to true a couple lines further down)
