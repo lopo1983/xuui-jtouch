@@ -16,24 +16,21 @@ may be freely distributed under the MIT license.
 *,*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
 html,body{height:100%;}
 html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
-body{position:relative;background:#000;font:400 14px/1.5 "Segoe UI","Lucida Grande",'Helvetica Neue Ultra Light','Helvetica Neue Interface M3',Helvetica,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",Arial,sans-serif;
--webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;}
+body{position:relative;background:#000;font:400 14px/1.5 "Segoe UI","Lucida Grande",'Helvetica Neue Ultra Light','Helvetica Neue Interface M3',Helvetica,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",Arial,sans-serif;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;}
 a,button,.btn{-ms-touch-action:manipulation;-webkit-touch-action:manipulation;touch-action:manipulation;}
 input,button,select,textarea{outline:none}
+input,textarea{-webkit-user-select:auto;user-select:auto}
 ::-webkit-input-placeholder{color:#a3a3c0;text-shadow:#fff 0 1px 0}
 
-/*
-#jqt{overflow:hidden;position:absolute;right:0;top:0;left:0;bottom:0;-webkit-text-size-adjust:none;-webkit-user-select:none;user-select:none;}
-*/
 
-[data-ui=view]{position:absolute;left:0;top:0;left:0;right:0;overflow:hidden;background:#efefef;
-box-shadow:0 0 1px rgba(0,0,0,.13);
+#jqt{overflow:hidden;position:absolute;right:0;top:0;left:0;bottom:0;-webkit-text-size-adjust:none;-webkit-perspective:1000;perspective:1000}
+[data-ui=view]{position:absolute;left:0;top:0;left:0;right:0;z-index:0;overflow:hidden;background:#efefef;box-shadow:0 0 1px rgba(0,0,0,.13);
+/*-webkit-transform:translate3d(0,0,0) rotate(0) scale(1);transform:translate3d(0,0,0) rotate(0) scale(1);
+/*overflow-x:hidden;height:100%;width:100%;
+display:-webkit-box;display:box;-webkit-box-orient:vertical;box-orient:vertical*/
 }
-
-[data-ui=view]{/*z-index:0;min-height:100%;width:100%;overflow-x:hidden;display:-webkit-box;display:box;-webkit-box-orient:vertical;box-orient:vertical*/}
 [data-ui=view].current{z-index:10}
 [data-ui=view]:not(.current):not(.in):not(.out){display:none}
-
 #jqt .scroll{position:relative;-webkit-box-flex:1;box-flex:1;overflow:auto;-webkit-overflow-scrolling:touch;-webkit-margin-collapse:separate}
 
 
@@ -42,7 +39,6 @@ box-shadow:0 0 1px rgba(0,0,0,.13);
 [data-ui=toolbar] .pure-btn{padding:.5em .6em;}
 header[data-ui=toolbar] .pure-btn{position:absolute;z-index:1;top:7px;right:7px;line-height:1;}
 header[data-ui=toolbar] .pure-btn.back,[data-ui=toolbar] .pure-btn.btn-left{right:auto;left:7px;}
-
 
 
 header,footer{}
@@ -71,11 +67,6 @@ header h1,header h2,header h3{margin:0;}
 /* Base UI End */
 /*
 
-#jqt.autoscroll:not(.animating3d)>[data-ui=view],#jqt.touchscroll:not(.animating3d)>[data-ui=view]{height:100%}
-#jqt.supports3d{-webkit-perspective:1000}
-#jqt.supports3d>[data-ui=view]{-webkit-transform:translate3d(0,0,0) rotate(0) scale(1);transform:translate3d(0,0,0) rotate(0) scale(1)}
-#jqt .selectable,#jqt input,#jqt textarea{-webkit-user-select:auto;user-select:auto}
-#jqt.notransform{-webkit-transform:none!important;transform:none!important}
 
 
 
@@ -122,4 +113,4 @@ position:absolute;right:10px;left:auto;margin-top:6px;top:0
 /* Test Skin */
 header[data-ui=toolbar]{background:#009688;color:#fff;}
 header[data-ui=toolbar] .pure-btn{background:none;border:1px solid #fff;color:#fff;}
-.pure-form{margin:0 16px;}
+.pure-form{margin:0 8px;}

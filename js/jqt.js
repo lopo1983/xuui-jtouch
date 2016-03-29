@@ -570,7 +570,7 @@
       };
       doNavigation=(function(_this){
         return function(fromPage,toPage,animation,goingBack){
-          var finalAnimationName,is3d,navigationEndHandler;
+          var finalAnimationName,navigationEndHandler;
           if(goingBack == null){
             goingBack=false;
           }
@@ -581,7 +581,7 @@
               if(finalAnimationName){
                 toPage.removeClass(finalAnimationName);
               }
-              $body.removeClass("animating animating3d");
+              $body.removeClass("animating");
             }else{
               fromPage.removeClass(finalAnimationName+" out");
               if(finalAnimationName){
@@ -633,7 +633,7 @@
             }
             console.warn("finalAnimationName:",finalAnimationName);
             fromPage.on("webkitAnimationEnd",navigationEndHandler);
-            $body.addClass("animating"+is3d);
+            $body.addClass("animating");
             toPage.addClass(finalAnimationName+" in current");
             fromPage.removeClass("current").addClass(finalAnimationName+" out");
           }else{
